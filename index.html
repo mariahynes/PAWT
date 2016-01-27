@@ -5,16 +5,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <style>
 
 .page-header {
-	background-color:white;
+	background-color:#009933;
 	border-radius: 5px;
+	padding: 10px;
+	text-align: center;
+	color: white;
+	border:none;
+}
+p{
+	color: #ecffe5;
 }
 body {
 	background-repeat: no-repeat;
 	background-size:cover;
-    background-image: url('images/small_green.jpg'); 
+    background-image: url('images/big_green.jpg'); 
 }
 
 /* For devices 400px and larger: */
@@ -30,46 +39,9 @@ body {
 <body>
   <div class="container">
   <div class="page-header">
-    <h2>Bdb Yapi Margin Report</h2>
+    <h2>Public Art Walking Tours | Dublin</h2>
     <p></p> 
   </div>
-
- <!-- 
-  <nav>
-	<a href="/html/">HOME</a> 
-	<a href='tours_and_prices.php'> <button type="button" class="btn btn-success">TOURS & PRICES</button></a>
-	<a href='sculptors_and_sculptures.php'> <button type="button" class="btn btn-success">SCULPTORS & SCULPTURES </button></a> 
-	<a href='further_reading.php'> <button type="button" class="btn btn-success">FURTHER READING</button> </a>
-	<a href='art_links.php'> <button type="button" class="btn btn-success">ART LINKS</button> </a>
-	<a href='contact.php'> <button type="button" class="btn btn-success">CONTACT</button> </a>
-</nav>
-!-->
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse"data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span> 
-      </button>
-      <a class="navbar-brand" href="#">PAWT</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">TOURS & PRICES</a></li>
-		<li><a href="#">SCULPTORS & SCULPTURES</a></li>
-		<li><a href="#">FURTHER READING</a></li>
-		<li><a href="#">ART LINKS</a></li>
-		<li><a href="#">CONTACT</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
 
 
 <nav class="navbar navbar-default">
@@ -80,60 +52,38 @@ body {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span> 
       </button>
-      <a class="navbar-brand" href="#">PAWT</a>
+      <a class="navbar-brand" href="#"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">TOURS & PRICES</a></li>
-		<li><a href="#">SCULPTORS & SCULPTURES</a></li>
-		<li><a href="#">FURTHER READING</a></li>
-		<li><a href="#">ART LINKS</a></li>
-		<li><a href="#">CONTACT</a></li>
+        <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li><a href="tours_and_prices.php"><span class="glyphicon glyphicon-road"></span> TOURS & PRICES</a></li>
+		<li><a href="sculptors_and_sculptures.php"><span class="glyphicon glyphicon-tower"></span> SCULPTORS & SCULPTURES</a></li>
+		<li><a href="further_reading.php"><span class="glyphicon glyphicon-book"></span> FURTHER READING</a></li>
+		<li><a href="art_links.php"><span class="glyphicon glyphicon-education"></span> ART LINKS</a></li>
+		<li><a href="contact.php"><span class="glyphicon glyphicon-comment"></span> CONTACT</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Login</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!--
 
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Public Art Walking Tours</a>
-    </div>
-    <ul class="nav navbar-nav ">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#"><button type="button" class="btn btn-success">TOURS & PRICES</button></a></li>
-      <li><a href="#"><button type="button" class="btn btn-success">SCULPTORS & SCULPTURES</button></a></li>
-      <li><a href="#"><button type="button" class="btn btn-success">FURTHER READING</button></a></li>
-	  <li><a href="#"><button type="button" class="btn btn-success">ART LINKS</button></a></li>
-	  <li><a href="#"><button type="button" class="btn btn-success">CONTACT</button></a></li>
-    </ul>
-  </div>
-</nav>
- !-->
   
   <div class="row">
     <div class="col-sm-4">
       <h3>Column 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <p>Public Art Walking Tours is Dublin City's newest walking tour experience. On our two city centre tours, we showcase the variety and skills of Irish and International sculptors through their work in St. Stephens Green and Merrion Square Park. 
+We offer one-hour tours on Sunday afternoons, at 1pm from June to the end of September. Group tours are available all year round. 
+
+For further details, please see the 'Tours & Prices' section of this website. 
+</p>
+      
     </div>
-    <div class="col-sm-4">
-      <h3>Column 2</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 3</h3>        
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-  </div>
+   
+
 </div>
 
 </body>
