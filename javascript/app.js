@@ -27,7 +27,8 @@ angular.module("pawtApp").config(function($routeProvider){
 	
 		templateUrl: "templates/contact.html",
 		controller: "ContactController",
-		controllerAs: "contact"
+		controllerAs: "contact",
+		activeTab: 'contact'
 	
 	})
 	
@@ -36,7 +37,8 @@ angular.module("pawtApp").config(function($routeProvider){
 	
 		templateUrl: "templates/tours.html",
 		controller: "ToursController",
-		controllerAs: "tours"
+		controllerAs: "tours",
+		activeTab:'tours'
 	
 	})
 
