@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"> </script>
@@ -18,15 +19,16 @@
 	text-align: center;
 	color: white;
 	border:none;
+  opacity:1;
 }
 .navbar{
 
 	border-radius: 4px;
 }
 body {
-	background-repeat: no-repeat;
+	background-repeat: repeat;
 	background-size:100%;
-	background-position: 0px 176px ;
+	background-position: 0px 0px ;
     background-image: url('images/Green_Kettle.png'); 
 }
 
@@ -47,6 +49,16 @@ footer{
           height: 100px;
           color: white;
           border-radius: 4px;
+          opacity:0.9;
+}
+
+.panel{
+  opacity:0.9;
+}
+
+.no_opacity{
+
+  opacity:1;
 }
 
  </style> 
@@ -54,7 +66,7 @@ footer{
 <body>
   <div class="container">
   <div class="page-header hidden-xs">
-    <h2>Public Art Walking Tours | Dublin</h2>
+    <h1>Public Art Walking Tours | Dublin</h1>
     <p></p> 
 
   </div>
@@ -73,72 +85,21 @@ footer{
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
-        <li><a href="#/tours"><span class="glyphicon glyphicon-road" aria-hidden="true"></span> TOURS & PRICES</a></li>
-		<li><a href="#/sculptures"><span class="glyphicon glyphicon-tower" aria-hidden="true"></span> SCULPTORS & SCULPTURES</a></li>
-		<li><a href="#/reading"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> FURTHER READING</a></li>
-		<li><a href="#/art"><span class="glyphicon glyphicon-education" aria-hidden="true"></span> ART LINKS</a></li>
-		<li><a href="#/contact"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> CONTACT</a></li>
+        <li id="li_home" class="active"><a href="#/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+        <li id="li_tours" ><a href="#/tours"><span class="glyphicon glyphicon-road" aria-hidden="true"></span> TOURS & PRICES</a></li>
+		<li id="li_sculpture"><a href="#/sculpture"><span class="glyphicon glyphicon-tower" aria-hidden="true"></span> SCULPTORS & SCULPTURES</a></li>
+		<li id="li_reading"><a href="#/reading"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> FURTHER READING</a></li>
+		<li id="li_art"><a href="#/art"><span class="glyphicon glyphicon-education" aria-hidden="true"></span> ART LINKS</a></li>
+		<li id="li_contact"><a href="#/contact"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> CONTACT</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Login</a></li>
+        <li><a href="#/" id="li_login"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Login</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
   <div ng-view>
-<!--
-              <div class="row">
-              <div class="col-xs-12 col-sm-4">
-              <div class="panel panel-success">
-                 <div class="panel-heading">   
-                    <h3 class="panel-title">Walking Tours</h3>
-                 </div> 
-                 <div class="panel-body"> 
-                    Public Art Walking Tours is Dublin City's newest walking tour experience. On our two city centre tours, we showcase the variety and skills of Irish and International sculptors through their work in St. Stephens Green and Merrion Square Park. <br><br>
-              We offer one-hour tours on Sunday afternoons, at 1pm from June to the end of September. Group tours are available by appointment all year round. 
-              <hr>
-              <a href ="#"  class = "btn btn-danger btn-lg"> Tours and Prices </a> 
-                 </div>
-              </div>
-              </div>
-              <div class="col-xs-12 col-sm-4">
-              <div class="panel panel-success">
-                 <div class="panel-heading">   
-                    <h3 class="panel-title">1916 Tours</h3>
-                 </div> 
-                 <div class="panel-body"> 
-                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    <hr>
-                    <a href ="#"  class = "btn btn-primary btn-lg"> 1916 Tours </a> 
-                 </div>
-              </div>
-              </div>
-              <div class="col-xs-12 col-sm-4">
-              <div class="panel panel-success">
-                 <div class="panel-heading">   
-                    <h3 class="panel-title">Groups</h3>
-                 </div> 
-                 <div class="panel-body"> 
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    <hr>
-                    <a href ="#"  class = "btn btn-warning btn-lg"> Contact Us </a> 
-                 </div>
-              </div>
-              </div>
-              </div>
--->
 
  </div> <!--end of ng-view -->
 
@@ -154,5 +115,6 @@ footer{
 
 <script src="javascript/app.js"></script>
 <script src="javascript/controller.js"></script>
+<script src="javascript/jQuery.js"></script>
 
 </html>
