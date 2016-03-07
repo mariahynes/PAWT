@@ -19,6 +19,21 @@ angular.module("routingControllers").controller("ToursController", function($sco
 	var self = this;
 	self.message = "This is the Home Page";
 
+	var myCenter = new google.maps.LatLng(45.434046,12.340284);
+	
+	
+	var mapProp = {
+	  		center:myCenter,
+	  		zoom:18,
+	  		mapTypeId:google.maps.MapTypeId.HYBRID
+  	};
+
+	$scope.map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+	
+	
+
+
+
 });
 
 angular.module("routingControllers").controller("SculptureController", function($scope){

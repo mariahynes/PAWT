@@ -8,22 +8,23 @@ $(".container").on("click", function(){
 		
 
 	});
+
+
 */
-
-
 
 $("#li_contact").on("click", function(){
 
 	$("#myNavbar li").removeClass("active");
 	$(this).addClass("active");
-
+	
 });
 
 $("#li_tours").on("click", function(){
 
 	$("#myNavbar li").removeClass("active");
-	$(this).addClass("active");
-
+	$(this).addClass("active noBorder");
+	
+	
 });
 
 $("#li_home").on("click", function(){
