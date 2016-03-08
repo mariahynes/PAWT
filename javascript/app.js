@@ -42,6 +42,16 @@ angular.module("pawtApp").config(function($routeProvider){
 	
 	})
 
+	//route for the tours and prices page (from One City One Book route)
+	$routeProvider.when("/tours/:ocob",{
+	
+		templateUrl: "templates/tours.html",
+		controller: "ToursController",
+		controllerAs: "tours",
+		activeTab:'tours'
+	
+	})
+
 	//route for the sculptors and scupltures page
 	$routeProvider.when("/sculpture",{
 	

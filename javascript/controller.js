@@ -14,23 +14,21 @@ angular.module("routingControllers").controller("HomeController", function($scop
 
 });
 
-angular.module("routingControllers").controller("ToursController", function($scope){
+angular.module("routingControllers").controller("ToursController", function($scope, $routeParams){
 
 	var self = this;
 	self.message = "This is the Home Page";
+	
+	if ($routeParams.ocob === "ocob"){
 
-	var myCenter = new google.maps.LatLng(45.434046,12.340284);
-	
-	
-	var mapProp = {
-	  		center:myCenter,
-	  		zoom:18,
-	  		mapTypeId:google.maps.MapTypeId.HYBRID
-  	};
+		$scope.ocob_true = true;
 
-	$scope.map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-	
-	
+	}
+	else{
+
+		$scope.ocob_true = false;
+		
+	};
 
 
 

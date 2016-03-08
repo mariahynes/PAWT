@@ -1,16 +1,14 @@
 $(document).ready(function(){
 
-/*
-$(".container").on("click", function(){
 
- 		
-		$(this).slideUp("fast");
-		
+$('.navbar a.navbar-link').click(function() {
+    var navbar_toggle = $('.navbar-toggle');
+    if (navbar_toggle.is(':visible')) {
+        navbar_toggle.trigger('click');
+    }
+});
 
-	});
 
-
-*/
 
 $("#li_contact").on("click", function(){
 
@@ -22,7 +20,7 @@ $("#li_contact").on("click", function(){
 $("#li_tours").on("click", function(){
 
 	$("#myNavbar li").removeClass("active");
-	$(this).addClass("active noBorder");
+	$(this).addClass("active");
 	
 	
 });
