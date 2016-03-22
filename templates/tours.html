@@ -40,24 +40,29 @@
                               </table>
 
                               <hr>
-                              The St. Stephen's Green tour consists of 13 sculptures all located within the park. One of these works is not accessible by wheelchair.<hr>
-                              <span class="glyphicon glyphicon-flag"></span> Meet at Fusiliers Arch, just outside the main entrance to Stephen's Green and the first point on the tour. 
+                              The St. Stephen's Green tour consists of 13 sculptures all located within the park. One of these works is not accessible by wheelchair.<br/><br/>
                               
-
-                              <button type="button" class="btn btn-primary btn-xs">Show me</button><br><br>
-                              <make-map-green map="map" id="map" class="collapse"></make-map-green>
+                              <table class="table">
+                                
+                                <tbody>
+                              <tr>
+                              <td><span class="glyphicon glyphicon-flag"></span></td>
+                              <td>Meet at Fusiliers Arch, just outside the main entrance to Stephen's Green and the first point on the tour. </td>
+                              
+                            <td>
+                              <button id="showGreen" type="button" ng-model="map" ng-click="setMap(0)" class="btn btn-primary btn-xs">Show me</button>
+                              </td>
+                              </tr>
+                              </tbody>
+                              </table>
+                              <make-map map="map" id="mapGreen" class="collapse"></make-map>
       
                               <script>
                               $(document).ready(function(){
-                                  $(".btn-primary").click(function(){
-                                      $(".collapse").collapse('toggle');
-                                  });
-                                  $(".btn-success").click(function(){
-                                      $(".collapse").collapse('show');
-                                  });
-                                  $(".btn-warning").click(function(){
-                                      $(".collapse").collapse('hide');
-                                  });
+                                    $("#showGreen").click(function(){     
+                                      $("#mapGreen").fadeToggle();
+                                      $("#mapMerrion").hide('fast');
+                                    });
                               });
                               </script>
 
@@ -90,9 +95,30 @@
                                 </tbody>
                               </table>
                               <hr>
-                              There are 11 sculptures in Merrion Square Park as well as the Rutland Memorial and a collection of old Dublin lampposts. <hr>
-                              <span class="glyphicon glyphicon-flag"></span> Meet at the entrance across from Leinster House (between the National Gallery and the Natural History Museum) in front of the glass pyramid. 
-                              
+                              There are 11 sculptures in Merrion Square Park as well as the Rutland Memorial and a collection of old Dublin lampposts.
+                              <br/><br/>
+
+                              <table class="table">
+                                
+                                <tbody>
+                              <tr>
+                              <td><span class="glyphicon glyphicon-flag"></span> </td><td>Meet at the entrance across from Leinster House (between the National Gallery and the Natural History Museum) in front of the glass pyramid. </td>
+                               <td>
+                              <button id="showMerrion" type="button" ng-model="map" ng-click="setMap(1)" class="btn btn-primary btn-xs">Show me</button>
+                              </td>
+                              </tr>
+                              </tbody>
+                              </table>
+                              <make-map map="map" id="mapMerrion" class="collapse"></make-map>
+      
+                              <script>
+                              $(document).ready(function(){
+                                    $("#showMerrion").click(function(){
+                                        $("#mapMerrion").fadeToggle();
+                                        $("#mapGreen").hide('fast');
+                                    });
+                              });
+                              </script>
                            </div>
                       </div>
                   </div>

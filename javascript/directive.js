@@ -8,13 +8,13 @@ angular.module('pawtDirectives').directive('pawtNav', function() {
 });
 
 
-angular.module('pawtDirectives').directive('makeMapGreen', function() {
+angular.module('pawtDirectives').directive('makeMap', function() {
  
             var directive = {
                   restrict: 'EA',                        
                   templateUrl: 'templates/directives/map.html',
                   scope: {
-                        map: '='
+                        map: '=map'
                   },
                   link: function(scope, element, attrs){
                         console.log("in map directive link");
@@ -33,7 +33,7 @@ angular.module('pawtDirectives').directive('makeMapGreen', function() {
                                     else
                                          width = $scope.map.width;
                                     if (!$scope.map.height)
-                                         var height = 300;
+                                         var height = 300; 
                                     else
                                          height = $scope.map.height;
                                     return width + 'x' + height;
@@ -41,4 +41,4 @@ angular.module('pawtDirectives').directive('makeMapGreen', function() {
                         }                                        
                   };
             return directive;        
-       });
+});

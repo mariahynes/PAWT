@@ -29,12 +29,24 @@ angular.module("routingControllers").controller("ToursController", function($sco
 		$scope.ocob_true = false;
 		
 	};
-
-	$scope.map = {
+	$scope.maps = [{
 					address: "53.339858, -6.260632",
 					zoom: 17,
 					width: 300
+					},{
+					address: "53.340082, -6.251452",
+					zoom: 17,
+					width: 300
+					}];
+
+	//$scope.map = $scope.maps[0];
+
+	$scope.setMap = function(the_value){
+
+		$scope.map = $scope.maps[the_value];
 	};
+
+
 		
 
 });
