@@ -5,12 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="css/style.css" rel="stylesheet">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"> </script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"> </script>
-  <script src="http://maps.googleapis.com/maps/api/js"></script>
+  
 <style>
 
 .page-header {
@@ -32,6 +33,10 @@
   font-size:2em;
 }
 
+#map {
+    width: 500px;
+    height: 400px;
+}
 
 
 body {
@@ -94,21 +99,26 @@ footer{
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li id="li_home" class="active"><a href="#/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
-        <li id="li_tours" ><a href="#/tours"><span class="glyphicon glyphicon-road" aria-hidden="true"></span> TOURS & PRICES</a></li>
+        <li id="li_home" class="active" ><a href="#/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+        <li id="li_tours"><a href="#/tours"><span class="glyphicon glyphicon-road" aria-hidden="true"></span> TOURS & PRICES</a></li>
 		<li id="li_sculpture"><a href="#/sculpture"><span class="glyphicon glyphicon-tower" aria-hidden="true"></span> SCULPTORS & SCULPTURES</a></li>
 		<li id="li_reading"><a href="#/reading"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> FURTHER READING</a></li>
 		<li id="li_art"><a href="#/art"><span class="glyphicon glyphicon-education" aria-hidden="true"></span> ART LINKS</a></li>
 		<li id="li_contact"><a href="#/contact"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> CONTACT</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#/" id="li_login"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Login</a></li>
+        <li id="li_login"><a href="#/"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Login</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
+
+
+
   <div ng-view>
+
+
 
  </div> <!--end of ng-view -->
 
@@ -125,6 +135,8 @@ footer{
 
 <script src="javascript/app.js"></script>
 <script src="javascript/controller.js"></script>
+<script src="javascript/directive.js"></script>
 <script src="javascript/jQuery.js"></script>
+
 
 </html>

@@ -30,7 +30,19 @@ angular.module("routingControllers").controller("ToursController", function($sco
 		
 	};
 
+	$scope.map = {
+					address: "53.339858, -6.260632",
+					zoom: 17,
+					width: 300
+	};
+		
 
+});
+
+angular.module("routingControllers").controller("ContactController", function($scope){
+
+	var self = this;
+	self.message = "This is the Home Page";
 
 });
 

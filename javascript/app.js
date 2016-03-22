@@ -1,4 +1,4 @@
-angular.module("pawtApp", ['ngRoute','routingControllers']);
+angular.module("pawtApp", ['ngRoute','routingControllers','pawtDirectives']);
 
 //configure the routes
 

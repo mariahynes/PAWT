@@ -1,5 +1,5 @@
 
-
+            
 
               <div class="row">
 
@@ -11,7 +11,7 @@
                            </div> 
                            <div class="panel-body"> 
                                <span ng-show="ocob_true" ng-class="{'highlight_ocob' :  (ocob_true == true)}">[ </span>
-                              To celebrate <span ng-class="{'highlight_ocob' :  (ocob_true == true)}">One City One Book </span> 2016, a extra tour will run every Sunday in April at 3pm 
+                              To celebrate <span ng-class="{'highlight_ocob' :  (ocob_true == true)}">One City One Book </span> 2016, an extra tour will run every Sunday in April at 3pm 
                               <span ng-show="ocob_true" ng-class="{'highlight_ocob' :  (ocob_true == true)}"> ]</span>
                               <br><br>
                               
@@ -43,7 +43,24 @@
                               The St. Stephen's Green tour consists of 13 sculptures all located within the park. One of these works is not accessible by wheelchair.<hr>
                               <span class="glyphicon glyphicon-flag"></span> Meet at Fusiliers Arch, just outside the main entrance to Stephen's Green and the first point on the tour. 
                               
-                               
+
+                              <button type="button" class="btn btn-primary btn-xs">Show me</button><br><br>
+                              <make-map-green map="map" id="map" class="collapse"></make-map-green>
+      
+                              <script>
+                              $(document).ready(function(){
+                                  $(".btn-primary").click(function(){
+                                      $(".collapse").collapse('toggle');
+                                  });
+                                  $(".btn-success").click(function(){
+                                      $(".collapse").collapse('show');
+                                  });
+                                  $(".btn-warning").click(function(){
+                                      $(".collapse").collapse('hide');
+                                  });
+                              });
+                              </script>
+
                            </div>
                         </div>
                     </div>
