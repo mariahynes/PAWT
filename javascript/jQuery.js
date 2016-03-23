@@ -6,6 +6,7 @@ $(document).ready(function(){
 			$("#myNavbar li").removeClass("active");
 			$(this).addClass("active");
 			
+			
 		});
 
 		$("#li_tours").on("click", function(){
@@ -13,14 +14,12 @@ $(document).ready(function(){
 			$("#myNavbar li").removeClass("active");
 			$(this).addClass("active");
 			
-			
 		});
 
 		$("#li_home").on("click", function(){
 
 			$("#myNavbar li").removeClass("active");
 			$(this).addClass("active");
-			
 		});
 
 		$("#li_sculpture").on("click", function(){
