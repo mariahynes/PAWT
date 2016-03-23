@@ -1,0 +1,11 @@
+
+
+ <div ng-repeat = "item in weatherList" ng-if="item.name === 'Dublin'">
+   {{item.name}}
+	<img src="http://openweathermap.org/img/w/{{item.weather[0].icon}}.png"/>
+	<small>now {{item.main.temp | number:0  }}&deg with {{item.weather[0].description }}</small>
+</div>
+
+
+	<!---->
+

@@ -1,4 +1,11 @@
-angular.module("pawtApp", ['ngRoute','routingControllers','pawtDirectives']);
+angular.module("pawtApp", ['ngRoute','routingControllers','pawtDirectives','pawtServices']);
+
+//Weather API
+angular.module("pawtApp").constant("myWeatherConfig", {
+	"currentWeatherURL": "http://api.openweathermap.org/data/2.5/weather?id=2964574&units=metric&mode=json&APPID=",
+	"forecastWeatherURL": "http://api.openweathermap.org/data/2.5/forecast?id=2964574&units=metric&mode=json&APPID=",
+	"weatherAPI": "1961b9f7fb842bc0630c66e1a95b5109"
+});
 
 //configure the routes
 

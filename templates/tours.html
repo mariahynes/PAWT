@@ -57,14 +57,7 @@
                               </table>
                               <make-map map="map" id="mapGreen" class="collapse"></make-map>
       
-                              <script>
-                              $(document).ready(function(){
-                                    $("#showGreen").click(function(){     
-                                      $("#mapGreen").fadeToggle();
-                                      $("#mapMerrion").hide('fast');
-                                    });
-                              });
-                              </script>
+                              
 
                            </div>
                         </div>
@@ -111,14 +104,7 @@
                               </table>
                               <make-map map="map" id="mapMerrion" class="collapse"></make-map>
       
-                              <script>
-                              $(document).ready(function(){
-                                    $("#showMerrion").click(function(){
-                                        $("#mapMerrion").fadeToggle();
-                                        $("#mapGreen").hide('fast');
-                                    });
-                              });
-                              </script>
+                              
                            </div>
                       </div>
                   </div>
@@ -168,7 +154,7 @@
                                 
 
                                 <hr>
-                                <a href ="#/contact"  class = "btn btn-primary btn-lg"> Contact Us </a> 
+                                <div id="Contact"><a href ="#/contact"  class = "btn btn-primary btn-lg"> Contact Us </a> </div>
                                 </div>
                             </div>
                           
@@ -176,3 +162,23 @@
          
               </div>
         </div>
+
+
+<script>
+                              $(document).ready(function(){
+                                    $("#showGreen").click(function(){     
+                                      $("#mapGreen").fadeToggle();
+                                      $("#mapMerrion").hide('fast');
+                                    });
+
+                                     $("#showMerrion").click(function(){
+                                        $("#mapMerrion").fadeToggle();
+                                        $("#mapGreen").hide('fast');
+                                    });
+                                     $("#Contact").click(function(){     
+                                      $("#myNavbar li").removeClass("active");
+                                      $("#li_contact").addClass("active");
+                                    });
+                              });
+                              </script>
+                            

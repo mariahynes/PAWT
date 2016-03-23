@@ -11,80 +11,41 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"> </script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"> </script>
-  
-<style>
-
-.page-header {
-	background-color:#6ca67a;
-	border-radius: 5px;
-	padding: 10px;
-	text-align: center;
-	color: white;
-	border:none;
-  opacity:1;
-}
-.navbar{
-
-	border-radius: 4px;
-}
-
-.highlight_ocob{
-  color: green;
-  font-size:2em;
-}
-
-#map {
-    width: 500px;
-    height: 400px;
-}
-
-
-body {
-	background-repeat: repeat;
-	background-size:100%;
-	background-position: 0px 0px ;
-    background-image: url('images/Green_Kettle.png'); 
-}
-
-/* For devices 400px and larger: */
-@media only screen and (min-width: 400px) {
-    body { 
-	background-repeat: no-repeat;
-	background-size:cover;
-	background-position: center;
-    background-image: url('images/Fusiliers_Arch.jpg'); 
-    }
-  
-}
-footer{
-          padding-top: 5px;
-          background-color:#6ca67a;
-          text-align: center;
-          height: 50px;
-          color: white;
-          border-radius: 4px;
-          opacity:0.9;
-}
-
-.panel{
-  opacity:0.9;
-}
-
-.no_opacity{
-
-  opacity:1;
-}
-
-
- </style> 
 </head>
+
 <body>
   <div class="container">
+
+ 
+
   <div class="page-header hidden-xs">
     <h1>Public Art Walking Tours | Dublin</h1>
-    <p></p> 
+   </div> 
+<div class= "page-header-weather">
+<div align="right">
+<table class="table-responsive">
+<tr align="right">
+<td align="right">
+    <weather-panel info="weatherList"></weather-panel> 
+</td>
+<td>
+    &nbsp<button id="forecast_btn" type="button" class="btn btn-xs" data-toggle="collapse" data-target="#showForecast"> ... </button> 
+</td>
+</tr>
+<tr>
+<td colspan = "2">
+    <div id="showForecast" class="collapse" align="right">
+    <forecast-weather-panel info2="forecastList"></forecast-weather-panel> 
+    </div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+  
+ <!--Weather end-->
 
-  </div>
+  
 <hr class="hidden-xs">
 <br class="visible-xs">
 
@@ -137,6 +98,7 @@ footer{
 <script src="javascript/app.js"></script>
 <script src="javascript/controller.js"></script>
 <script src="javascript/directive.js"></script>
+<script src="javascript/service.js"></script>
 <script src="javascript/jQuery.js"></script>
 
 

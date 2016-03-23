@@ -35,7 +35,7 @@
                     <p>
                     13. Wolfe Tone <i>(Edward Delaney)</i>
               <hr>
-              <a href ="#/tours"  class = "btn btn-danger btn-lg"> Tours and Prices </a> 
+              <div id="clickTours"> <a href ="#/tours"  class = "btn btn-danger btn-lg"> Tours and Prices </a> </div>
                  </div>
               </div>
               </div>
@@ -86,7 +86,7 @@
                     12. The Victims  <i>(Andrew O’Connor)</i>
                   
               <hr>
-              <a href ="#/tours"  class = "btn btn-danger btn-lg"> Tours and Prices </a> 
+              <div id ="ClickTours2"><a href ="#/tours"  class = "btn btn-danger btn-lg"> Tours and Prices </a> </div>
                  </div>
               </div>
               </div>
@@ -103,3 +103,16 @@
               </div>
               </div>
               </div>
+
+               <script>
+                $(document).ready(function(){
+                      $("#clickTours").click(function(){     
+                        $("#myNavbar li").removeClass("active");
+                        $("#li_tours").addClass("active");
+                      });
+                      $("#clickTours2").click(function(){     
+                        $("#myNavbar li").removeClass("active");
+                        $("#li_tours").addClass("active");
+                      });
+                });
+                </script>

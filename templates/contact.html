@@ -13,11 +13,23 @@
 
 Tel: +353 87 980 3018
 <p>
+
+
               <hr>
-              <a href ="#/tours"  class = "btn btn-danger btn-lg"> Tours and Prices </a> 
+              <div id ="clickTours"><a href ="#/tours"  class = "btn btn-danger btn-lg"> Tours and Prices </a> </div>
                  </div>
               </div>
               </div>
        
           
               </div>
+
+              <script>
+              $(document).ready(function(){
+                    $("#clickTours").click(function(){     
+                      $("#myNavbar li").removeClass("active");
+                      $("#li_tours").addClass("active");
+                    });
+                    
+              });
+              </script>

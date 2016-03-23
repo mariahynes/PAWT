@@ -23,7 +23,7 @@
                       ‘Fallen’ by Lia Mills has been chosen as the <i>One City One Book</i> for 2016. Read about this award-winning initiative <a href="http://www.dublinonecityonebook.ie/" target = 'blank'>here</a>. We are running special tours to mark this occasion every Sunday in April at 3pm. 
                       <img class="img-responsive no_opacity" alt="One City One Book" src="images/OneCityOneBook_smaller.png" />
                     <hr>
-                    <a href ="#/tours/ocob/"  class = "btn btn-primary btn-lg"> Book Here </a> 
+                   <div id="OneCity"> <a href ="#/tours/ocob/"  class = "btn btn-primary btn-lg"> Book Here </a> </div>
                  </div>
               </div>
               </div>
@@ -35,8 +35,30 @@
                  <div class="panel-body"> 
                     Are you part of a group or bringing a group to Dublin? Would you like to take our Walking Tour? <br><br>We can arrange a tour for your group at a time that’s convenient for you. Contact us to discuss. <br><br>Group tours are available by appointment all year round. 
                     <hr>
-                    <a href ="#/contact"  class = "btn btn-warning btn-lg"> Contact Us </a> 
+                    <div id="Contact"><a href ="#/contact"  class = "btn btn-warning btn-lg"> Contact Us </a> </div>
                  </div>
               </div>
               </div>
               </div>
+
+
+                           <script>
+                              $(document).ready(function(){
+                                    $("#clickTours").click(function(){     
+                                      $("#myNavbar li").removeClass("active");
+                                      $("#li_tours").addClass("active");
+                                    });
+                                    $("#OneCity").click(function(){     
+                                      $("#myNavbar li").removeClass("active");
+                                      $("#li_tours").addClass("active");
+                                    });
+                                    $("#Contact").click(function(){     
+                                      $("#myNavbar li").removeClass("active");
+                                      $("#li_contact").addClass("active");
+                                    });
+                              });
+                              </script>
+
+
+
+      

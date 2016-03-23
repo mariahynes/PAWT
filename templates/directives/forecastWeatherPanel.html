@@ -1,0 +1,57 @@
+
+
+ <div ng-repeat = "forecast in forecastList" ng-if="forecast.city.name === 'Dublin'">
+   
+	<style>
+
+		#day {
+			color: #535353;
+			font-weight: bold;
+		}
+		#desc{
+			font-size:x-small;
+			color: #535353;
+			font-weight: bold;
+		}
+		td {
+			color:green;
+		}
+	
+	</style>
+	<table class="table-responsive">
+	<tbody>
+	<tr>
+	
+			<td ng-repeat = "list in forecast.list | filter : '12:00:00' ">
+			
+				        
+				<table class="table-condensed">
+				<tbody>
+				  <tr>
+					<td id="day" align="center">{{list.dt*1000 | date: 'EEE'}}</td>
+				  </tr>							
+					<tr>
+					<td align="center">
+					<img src="http://openweathermap.org/img/w/{{list.weather[0].icon}}.png"/>
+					</td>
+					</tr>
+					  <tr>
+						<td align="center">{{list.main.temp | number:0 }}&deg</td>
+					  </tr>
+					  <tr>
+						<td id="desc" align="center">{{list.weather[0].description }}</td>
+					  </tr>
+				</tbody>
+			  </table>
+			 
+			
+			</td>
+	
+	</tr>
+	</tbody>
+	</table>
+	
+</div>
+	
+	
+
