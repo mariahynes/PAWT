@@ -19,13 +19,14 @@ angular.module('pawtDirectives').directive('makeMap', function() {
                         console.log("in map directive link");
                   },
                   controller: function mapController($scope) {
- 
+                              
                               $scope.zoomIn = function(){
                                     $scope.map.zoom++;
                               };
                               $scope.zoomOut = function(){
                                     $scope.map.zoom--;
                               };
+                              
                               $scope.mapDimensions = function() {
                                     if (!$scope.map.width)
                                          var width = 300;

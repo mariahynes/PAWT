@@ -1,6 +1,7 @@
-<div class=" " style='position: relative'>
+<div class=" " style='position: relative' >
  
-    <img class='img-thumbnail img-responsive no_opacity' src="https://maps.googleapis.com/maps/api/staticmap?center={{map.address}}&zoom={{map.zoom}}&size={{mapDimensions()}}&markers=color:red|{{map.address}}" /> 
+    <!--<img class='img-thumbnail img-responsive no_opacity' src="https://maps.googleapis.com/maps/api/staticmap?center={{map.address}}&zoom={{map.zoom}}&size={{mapDimensions()}}&markers=color:red|{{map.address}}" /> -->
+    <img class='img-thumbnail img-responsive no_opacity' src="https://maps.googleapis.com/maps/api/staticmap?center={{map.address}}&zoom={{map.zoom}}&size={{mapDimensions()}}&maptype={{map.mapType}}&markers=color:red|{{map.address}}&key:{{map.key}}" /> 
 	<br>
 	<div style='position: absolute; top: 1em; left: 0.6em'>
  
@@ -14,4 +15,12 @@
 	</div>
 </div>
 
-<!-- -->
+<!--
+
+					panControl:true,
+				    zoomControl:true,
+				    mapTypeControl:true,
+				    scaleControl:true,
+				    streetViewControl:true,
+				    overviewMapControl:true,
+				    rotateControl:true -->

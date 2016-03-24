@@ -14,7 +14,7 @@ angular.module("routingControllers").controller("HomeController", function($scop
 
 });
 
-angular.module("routingControllers").controller("ToursController", function($scope, $routeParams){
+angular.module("routingControllers").controller("ToursController", function($scope, $routeParams,myMapConfig){
 
 	var self = this;
 	self.message = "This is the Home Page";
@@ -32,11 +32,15 @@ angular.module("routingControllers").controller("ToursController", function($sco
 	$scope.maps = [{
 					address: "53.339858, -6.260632",
 					zoom: 17,
-					width: 300
+					width: 300,
+					mapType:"hybrid",
+					key: myMapConfig.mapAPI
 					},{
 					address: "53.340082, -6.251452",
 					zoom: 17,
-					width: 300
+					width: 300,
+					mapType:"hybrid",
+					key: myMapConfig.mapAPI
 					}];
 
 	//$scope.map = $scope.maps[0];

@@ -7,6 +7,12 @@ angular.module("pawtApp").constant("myWeatherConfig", {
 	"weatherAPI": "1961b9f7fb842bc0630c66e1a95b5109"
 });
 
+angular.module("pawtApp").constant("myMapConfig",{
+
+	"mapAPI": "AIzaSyBLTWmpkfRaXcmMGB7CV-a2BJ_MJXUsMug"
+
+});
+
 //configure the routes
 
 angular.module("pawtApp").config(function($routeProvider){
