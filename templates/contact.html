@@ -2,26 +2,135 @@
 
 
               <div class="row">
-              <div class="col-xs-12 col-sm-4">
-              <div class="panel panel-success">
-                 <div class="panel-heading">   
-                    <h3 class="panel-title">For Group Bookings and General Enquiries</h3>
-                 </div> 
-                 <div class="panel-body"> 
-                  <a href='mailto:publicart.tours@gmail.com?Subject=Public Art Walking Tours'>publicart.tours@gmail.com</a>
-<p>
 
-Tel: +353 87 980 3018
-<p>
-
-
-              <hr>
-              <div id ="clickTours"><a href ="#/tours"  class = "btn btn-danger btn-lg"> Tours and Prices </a> </div>
-                 </div>
-              </div>
-              </div>
+                  <div class="col-xs-12 col-sm-4">
+                  <div class="panel panel-success">
+                     <div class="panel-heading">   
+                        <h3 class="panel-title">Contact Details</h3>
+                     </div> 
+                     <div class="panel-body"> 
+                      <table class="table">
+                      <tbody>
+                      <tr>
+                        <td>Email</td>
+                        <td>
+                        <a href='mailto:publicart.tours@gmail.com?Subject=Public Art Walking Tours'>publicart.tours@gmail.com</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Mobile</td>
+                        <td>
+                        +353 87 980 3018
+                        </td>
+                      </tr>
+                      </tbody>
+                      </table>
+                  
+                 
+                     </div>
+                  </div>
+                  </div>
        
-          
+                  <div class="col-xs-12 col-sm-8"> 
+
+                   <div class="panel panel-success">
+                     <div class="panel-heading">   
+                        <h3 class="panel-title">Something to tell us?</h3>
+                         </div> 
+                         <div class="panel-body"> 
+                      
+                      
+                        
+                        <form class="form"  name="feedback_form"  novalidate >
+                            <div class="form-group" ng-hide = "submitted">
+                                
+                            <label>First Name</label>
+                                    <input  class="form-control"
+                                            type="text" 
+                                            placeholder="Enter Firstname" 
+                                            name="firstname" 
+                                  id = "fname"
+                                            ng-model="user.firstname" 
+                                            ng-minlength=3 
+                                            ng-maxlength=20 
+                                            required />
+                                </div>        
+                            
+                         <div id="submitOK"> {{ submitMessage }}</div>
+                            <div class="form-group" ng-hide = "submitted">
+                                
+                            <label >Surname</label>
+                                    <input  class="form-control"
+                                            type="text" 
+                                            placeholder="Enter Surname" 
+                                            name="surname" 
+                                  id = "sname"
+                                            ng-model="user.surname" 
+                                            ng-minlength=3 
+                                            ng-maxlength=20 
+                                            required />
+                                       
+                            </div>
+                          <div id="emailerror">{{ errorEmail }}</div>
+                            <div class="form-group" ng-hide = "submitted">
+                                
+                                  <label>Email</label>
+                                    <input  class="form-control"
+                                            type="email" 
+                                            placeholder="Enter email address"
+                                            name="email" 
+                                  id = "email"
+                                            ng-model="user.email" 
+                                            ng-minlength=5 
+                                            ng-maxlength=40 
+                                            required  />
+                                    
+                            </div> 
+                          <div class="form-group" ng-if = "feedback_form.email.$valid && submitted == false">
+                                
+                                  <label>Re-enter Email</label>
+                                    <input  class="form-control"
+                                            type="email" 
+                                            placeholder="Re-enter your email address" 
+                                            name="email2" 
+                                  id = "email2"
+                                            ng-model="user.email2" 
+                                            ng-minlength=5 
+                                            ng-maxlength=40 
+                                            required  />
+                                   
+                            </div>  
+                            <div class="form-group" ng-hide = "submitted">
+                               
+                                  <label>Message</label>
+                                    <textarea class="form-control"
+                                            rows = "5"
+                                            placeholder="Your message..." 
+                                            name="message"
+                                  id = "message"
+                                            ng-model="user.message" 
+                                            ng-minlength=5 
+                                            ng-maxlength=250 
+                                            required> </textarea>
+                                  
+                            </div> 
+                          
+                          <div class="form-group" ng-hide = "submitted">
+                            
+                            <br/><button ng-disabled="feedback_form.$invalid" class="btn btn-primary btn-lg" ng-click="feedbackForm(feedback_form)">Submit</button>
+                            <button ng-disabled="feedback_form.$pristine" class="btn btn-primary btn-lg" ng-click="clearForm()">Clear</button>
+                            
+                          </div> 
+                          
+                        
+                       
+                        <div class="col-md-4" ng-show = "submitted">
+                          <br/><button class="btn btn-primary btn-lg" ng-click="formReload()" >Send another message</button>
+                        </div>
+                        </form>
+                       </div>
+                   </div>
+                  </div> 
               </div>
 
               <script>
