@@ -61,41 +61,6 @@ angular.module("routingControllers").controller("ContactController", function($s
 	$scope.errorEmail= "";
 	$scope.emailsMatch = false;
 	
-	$scope.feedbackForm = function(feedbackForm){
-	
-		if(feedbackForm.$valid){
-		
-			if($scope.user.email === $scope.user.email2){
-				$scope.submitted = true;
-				//send email service???
-				$scope.submitMessage = "Thank you for your message, " + $scope.user.firstname;
-				$scope.errorEmail = "";
-				$scope.emailsMatch = true;
-				
-				$http({
-					  method  : 'POST',
-					  url     : 'process.php',
-					  data    : $.param($scope.user),  // pass in data as strings
-					  headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data 
-				});
-				
-				
-				 
-				
-			}
-			else{
-				$scope.errorEmail = "Sorry, your email addresses do not match.";
-				$scope.submitted = false;
-				$scope.emailsMatch = false;
-			}
-		}
-		else{
-			$scope.submitted = true;
-			$scope.errorEmail = "";
-			$scope.submitMessage = "Sorry, your message is not valid.";
-		}
-	};
-	
 	$scope.formReload = function(){
 		$scope.submitted = false;
 		$scope.user.message = "";
@@ -109,6 +74,49 @@ angular.module("routingControllers").controller("ContactController", function($s
 		$scope.submitMessage = "";
 		$scope.user = {};
 	};
+
+	$scope.feedbackForm = function(feedbackForm){
+	
+		if(feedbackForm.$valid){
+		
+			if($scope.user.email === $scope.user.email2){
+
+				$scope.errorEmail = "";
+				$scope.emailsMatch = true;
+				
+				$http({
+					  method  : 'POST',
+					  url     : 'mailer.php',
+					  data    : $.param($scope.user),  // pass in data as strings
+					  headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data 
+				})
+				.then(function mySuccess(response){
+
+				      $scope.submitMessage = "Thank you for your message, " + $scope.user.firstname;
+				      $scope.submitted = true;
+
+				 }, function myError(response){
+				      
+				      $scope.submitMessage = "Sorry, "+ $scope.user.firstname + ", your message did not send";
+				      $scope.submitted = true;
+				    
+				});
+
+			}
+			else{
+				$scope.errorEmail = "Sorry, your email addresses do not match.";
+				$scope.submitted = false;
+				$scope.emailsMatch = false;
+			}
+		
+		}
+		else{
+			$scope.submitted = true;
+			$scope.errorEmail = "";
+			$scope.submitMessage = "Sorry, your message is not valid.";
+		}
+	};
+	
 
 });
 
