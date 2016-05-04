@@ -42,6 +42,9 @@ angular.module("routingControllers").controller("ToursController", function($sco
 					}];
 
 	//$scope.map = $scope.maps[0];
+	
+
+	
 
 	$scope.setMap = function(the_value){
 

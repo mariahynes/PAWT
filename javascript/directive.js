@@ -28,14 +28,19 @@ angular.module('pawtDirectives').directive('makeMap', function() {
                               };
                               
                               $scope.mapDimensions = function() {
+
                                     if (!$scope.map.width)
                                          var width = 300;
                                     else
                                          width = $scope.map.width;
+
                                     if (!$scope.map.height)
                                          var height = 300; 
+
                                     else
                                          height = $scope.map.height;
+
+                                        
                                     return width + 'x' + height;
                               }                
                         }                                        
