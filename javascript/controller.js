@@ -41,10 +41,6 @@ angular.module("routingControllers").controller("ToursController", function($sco
 					key: myMapConfig.mapAPI
 					}];
 
-	//$scope.map = $scope.maps[0];
-	
-
-	
 
 	$scope.setMap = function(the_value){
 

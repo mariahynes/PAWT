@@ -61,14 +61,14 @@
       <a class="navbar-brand hidden-lg hidden-md hidden-sm" href="#">Public Art Walking Tours</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-        <ul id="items" class="nav navbar-nav navbar-right">
+       <ul id="items" class="nav navbar-nav navbar-right"> 
           <li id="li_home" class="active" ><a href="#/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
           <li id="li_tours"><a href="#/tours"><span class="glyphicon glyphicon-road" aria-hidden="true"></span> TOURS & PRICES</a></li>
       		<li id="li_sculpture"><a href="#/sculpture"><span class="glyphicon glyphicon-tower" aria-hidden="true"></span> SCULPTORS & SCULPTURES</a></li>
       		<li id="li_reading"><a href="#/reading"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> FURTHER READING</a></li>
       		<li id="li_art"><a href="#/art"><span class="glyphicon glyphicon-education" aria-hidden="true"></span> ART LINKS</a></li>
       		<li id="li_contact"><a href="#/contact"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> CONTACT</a></li>
-          <li id="li_login"><a href="#/"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Login</a></li>
+          <li id="li_login" class="hidden"><a href="#/"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Login</a></li>
         </ul>
     </div>
   </div>
@@ -78,7 +78,7 @@
                               <script>
                               $(document).ready(function(){
                                     
-                                $(document).on('click', '#myNavbar.in a', function(e) {
+                                $(document).on('click', '#myNavbar a', function(e) {
                                 $("#myNavbar").removeClass("in");//.addClass("collapse");
                                 });
 
